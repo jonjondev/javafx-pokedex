@@ -1,0 +1,38 @@
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox fx:controller="pokedex.PokedexController" xmlns:fx="http://javafx.com/fxml" alignment="center" spacing="20" styleClass="body">
+    <stylesheets>
+        <URL value="@pokedexStyle.css"/>
+    </stylesheets>
+    <padding>
+        <Insets topRightBottomLeft="40"/>
+    </padding>
+
+    <ImageView fitHeight="80" fitWidth="200">
+        <image><Image url="@pokemonTitle.png"/></image>
+    </ImageView>
+
+    <VBox alignment="center" styleClass="bezel">
+        <padding>
+            <Insets topRightBottomLeft="20"/>
+        </padding>
+        <VBox alignment="center" spacing="10" styleClass="screen">
+            <padding>
+                <Insets topRightBottomLeft="15"/>
+            </padding>
+            <Text fx:id="nameTxt" styleClass="screen-text" text="#0 pokemon name"/>
+            <Text fx:id="typeTxt" styleClass="screen-text" text="pokemon type"/>
+        </VBox>
+    </VBox>
+
+    <HBox alignment="center" spacing="10">
+        <Button styleClass="button, button-back" text="Previous" onAction="#handlePrevious"/>
+        <Button styleClass="button, button-forward" text="Next" onAction="#handleNext"/>
+    </HBox>
+</VBox>
